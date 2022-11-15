@@ -17,8 +17,22 @@ namespace RegistroServicios.CapaPresentacion
         {
             InitializeComponent();
 
+            
+        }
+
+        private void RealizaOrden_Load(object sender, EventArgs e)
+        {
             dgv.Formato(dataGridView1, 1);
         }
 
+        private void ListarEquipos()
+        {
+            clsCombos objProd = new clsCombos();
+            cmbEquipo.DataSource = objProd.ListarEquipos();
+            cmbEquipo.DisplayMember = "CATEGORIA";
+            cmbEquipo.ValueMember = "IDCATEG";
+        }
     }
-}
+
+
+    }
