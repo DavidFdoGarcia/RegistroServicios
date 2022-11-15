@@ -1,0 +1,12 @@
+C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.csprojAssemblyReference.cache
+C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.CapaPresentacion.Base.resources
+C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.CapaPresentacion.Menu.resources
+C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.Properties.Resources.resources
+C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.csproj.GenerateResource.cache
+C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.csproj.CoreCompileInputs.cache
+C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\bin\Debug\RegistroServicios.exe.config
+C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\bin\Debug\RegistroServicios.exe
+C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\bin\Debug\RegistroServicios.pdb
+C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.exe
+C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.pdb
+C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.CapaPresentacion.RealizaOrden.resources
