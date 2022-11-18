@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CapaDatos\clsCombos.cs" />
-    <Compile Include="CapaDatos\clsRegistros.cs" />
+    <Compile Include="CapaDatos\clsAccesorios.cs" />
+    <Compile Include="CapaDatos\clsEquipo.cs" />
+    <Compile Include="CapaDatos\clsOrden.cs" />
+    <Compile Include="CapaDatos\clsRangoUsuario.cs" />
     <Compile Include="CapaDatos\ConexionBD.cs" />
     <Compile Include="CapaDatos\dgv.cs" />
     <Compile Include="CapaPresentacion\Base.cs">

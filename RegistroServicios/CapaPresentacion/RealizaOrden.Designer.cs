@@ -30,35 +30,47 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.dtIngreso = new System.Windows.Forms.DateTimePicker();
+            this.txtOrden = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmbEquipo = new System.Windows.Forms.ComboBox();
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.txtSerie = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.cmbAtiende = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCel = new System.Windows.Forms.TextBox();
-            this.txtCliente = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.cmbAccesorio = new System.Windows.Forms.ComboBox();
+            this.txtFalla = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.txtObservacion = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.idAccesorio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Accesorio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.txtIDUsu = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -80,8 +92,9 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
-            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.txtIDUsu);
+            this.tabPage1.Controls.Add(this.dtIngreso);
+            this.tabPage1.Controls.Add(this.txtOrden);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.label3);
@@ -95,27 +108,29 @@
             this.tabPage1.Text = "Datos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dtIngreso
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(113, 33);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(138, 23);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dtIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtIngreso.Location = new System.Drawing.Point(113, 33);
+            this.dtIngreso.Name = "dtIngreso";
+            this.dtIngreso.Size = new System.Drawing.Size(138, 23);
+            this.dtIngreso.TabIndex = 10;
             // 
-            // textBox5
+            // txtOrden
             // 
-            this.textBox5.Location = new System.Drawing.Point(410, 33);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(72, 23);
-            this.textBox5.TabIndex = 9;
+            this.txtOrden.Location = new System.Drawing.Point(410, 33);
+            this.txtOrden.Name = "txtOrden";
+            this.txtOrden.Size = new System.Drawing.Size(72, 23);
+            this.txtOrden.TabIndex = 9;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtObservacion);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.cmbEquipo);
             this.groupBox2.Controls.Add(this.txtModelo);
             this.groupBox2.Controls.Add(this.txtSerie);
-            this.groupBox2.Controls.Add(this.radioButton1);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label7);
@@ -123,7 +138,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.groupBox2.Location = new System.Drawing.Point(25, 203);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(669, 126);
+            this.groupBox2.Size = new System.Drawing.Size(716, 152);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Equipo";
@@ -134,39 +149,28 @@
             this.cmbEquipo.Location = new System.Drawing.Point(81, 40);
             this.cmbEquipo.Name = "cmbEquipo";
             this.cmbEquipo.Size = new System.Drawing.Size(184, 24);
-            this.cmbEquipo.TabIndex = 3;
+            this.cmbEquipo.TabIndex = 5;
             // 
             // txtModelo
             // 
             this.txtModelo.Location = new System.Drawing.Point(81, 84);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(184, 22);
-            this.txtModelo.TabIndex = 4;
+            this.txtModelo.TabIndex = 6;
             // 
             // txtSerie
             // 
-            this.txtSerie.Location = new System.Drawing.Point(396, 57);
+            this.txtSerie.Location = new System.Drawing.Point(396, 17);
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(236, 22);
-            this.txtSerie.TabIndex = 5;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(470, 100);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(179, 20);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Agregar Accesorio y Falla";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.txtSerie.TabIndex = 7;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(303, 57);
+            this.label8.Location = new System.Drawing.Point(303, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 18);
             this.label8.TabIndex = 7;
@@ -194,12 +198,26 @@
             this.label7.TabIndex = 5;
             this.label7.Text = "Equipo:";
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(85, 447);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(145, 17);
+            this.radioButton1.TabIndex = 8;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Agregar Accesorio y Falla";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtApellido);
+            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.cmbAtiende);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtCel);
-            this.groupBox1.Controls.Add(this.txtCliente);
+            this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -211,20 +229,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Cliente";
             // 
+            // txtApellido
+            // 
+            this.txtApellido.Location = new System.Drawing.Point(447, 40);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(269, 22);
+            this.txtApellido.TabIndex = 2;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label12.Location = new System.Drawing.Point(366, 40);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(75, 18);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Apellido:";
+            // 
             // cmbAtiende
             // 
             this.cmbAtiende.FormattingEnabled = true;
-            this.cmbAtiende.Location = new System.Drawing.Point(470, 63);
+            this.cmbAtiende.Location = new System.Drawing.Point(470, 88);
             this.cmbAtiende.Name = "cmbAtiende";
-            this.cmbAtiende.Size = new System.Drawing.Size(184, 24);
-            this.cmbAtiende.TabIndex = 6;
+            this.cmbAtiende.Size = new System.Drawing.Size(220, 24);
+            this.cmbAtiende.TabIndex = 4;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(395, 63);
+            this.label9.Location = new System.Drawing.Point(393, 88);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(70, 18);
             this.label9.TabIndex = 11;
@@ -235,14 +271,14 @@
             this.txtCel.Location = new System.Drawing.Point(88, 84);
             this.txtCel.Name = "txtCel";
             this.txtCel.Size = new System.Drawing.Size(269, 22);
-            this.txtCel.TabIndex = 2;
+            this.txtCel.TabIndex = 3;
             // 
-            // txtCliente
+            // txtNombre
             // 
-            this.txtCliente.Location = new System.Drawing.Point(88, 37);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(269, 22);
-            this.txtCliente.TabIndex = 1;
+            this.txtNombre.Location = new System.Drawing.Point(88, 37);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(269, 22);
+            this.txtNombre.TabIndex = 1;
             // 
             // label5
             // 
@@ -262,9 +298,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label4.Location = new System.Drawing.Point(6, 40);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 18);
+            this.label4.Size = new System.Drawing.Size(72, 18);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Cliente:";
+            this.label4.Text = "Nombre:";
             // 
             // label3
             // 
@@ -290,12 +326,12 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBox6);
-            this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.Controls.Add(this.cmbAccesorio);
+            this.tabPage2.Controls.Add(this.txtFalla);
             this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.comboBox3);
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
@@ -305,25 +341,23 @@
             this.tabPage2.Text = "Accesorios";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // cmbAccesorio
             // 
-            this.textBox6.Location = new System.Drawing.Point(524, 121);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox6.Size = new System.Drawing.Size(217, 205);
-            this.textBox6.TabIndex = 14;
+            this.cmbAccesorio.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAccesorio.FormattingEnabled = true;
+            this.cmbAccesorio.Location = new System.Drawing.Point(121, 63);
+            this.cmbAccesorio.Name = "cmbAccesorio";
+            this.cmbAccesorio.Size = new System.Drawing.Size(199, 24);
+            this.cmbAccesorio.TabIndex = 15;
             // 
-            // label11
+            // txtFalla
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(590, 84);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 18);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "Falla:";
+            this.txtFalla.Location = new System.Drawing.Point(524, 121);
+            this.txtFalla.Multiline = true;
+            this.txtFalla.Name = "txtFalla";
+            this.txtFalla.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtFalla.Size = new System.Drawing.Size(217, 205);
+            this.txtFalla.TabIndex = 14;
             // 
             // button1
             // 
@@ -335,14 +369,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(121, 65);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(184, 25);
-            this.comboBox3.TabIndex = 11;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label10
             // 
@@ -360,11 +387,27 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idAccesorio,
+            this.Accesorio,
+            this.Serie,
+            this.Observacion,
+            this.idOrden});
             this.dataGridView1.Location = new System.Drawing.Point(20, 130);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(468, 219);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.Location = new System.Drawing.Point(590, 84);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 18);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Falla:";
             // 
             // label1
             // 
@@ -398,16 +441,102 @@
             this.button3.TabIndex = 14;
             this.button3.Text = "Guardar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // txtObservacion
+            // 
+            this.txtObservacion.Location = new System.Drawing.Point(405, 55);
+            this.txtObservacion.Multiline = true;
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtObservacion.Size = new System.Drawing.Size(305, 91);
+            this.txtObservacion.TabIndex = 8;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label13.Location = new System.Drawing.Point(292, 66);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(107, 18);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "Observación:";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(336, 479);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(179, 20);
+            this.radioButton2.TabIndex = 11;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Agregar Accesorio y Falla";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // idAccesorio
+            // 
+            this.idAccesorio.DataPropertyName = "idAccesorio";
+            this.idAccesorio.HeaderText = "idAccesorio";
+            this.idAccesorio.Name = "idAccesorio";
+            // 
+            // Accesorio
+            // 
+            this.Accesorio.DataPropertyName = "Accesorio";
+            this.Accesorio.HeaderText = "Accesorio";
+            this.Accesorio.Name = "Accesorio";
+            // 
+            // Serie
+            // 
+            this.Serie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Serie.DataPropertyName = "Serie";
+            this.Serie.HeaderText = "Serie";
+            this.Serie.Name = "Serie";
+            // 
+            // Observacion
+            // 
+            this.Observacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Observacion.DataPropertyName = "Observacion";
+            this.Observacion.HeaderText = "Observacion";
+            this.Observacion.Name = "Observacion";
+            // 
+            // idOrden
+            // 
+            this.idOrden.DataPropertyName = "Orden";
+            this.idOrden.HeaderText = "idOrden";
+            this.idOrden.Name = "idOrden";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnNuevo.Location = new System.Drawing.Point(426, 435);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(87, 38);
+            this.btnNuevo.TabIndex = 15;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // txtIDUsu
+            // 
+            this.txtIDUsu.Location = new System.Drawing.Point(6, 115);
+            this.txtIDUsu.Name = "txtIDUsu";
+            this.txtIDUsu.Size = new System.Drawing.Size(19, 23);
+            this.txtIDUsu.TabIndex = 11;
+            this.txtIDUsu.Visible = false;
             // 
             // RealizaOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 485);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.radioButton1);
             this.Name = "RealizaOrden";
             this.Text = "RealizaOrden";
             this.Load += new System.EventHandler(this.RealizaOrden_Load);
@@ -435,13 +564,12 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.DateTimePicker dtIngreso;
+        private System.Windows.Forms.TextBox txtOrden;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cmbEquipo;
         private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.TextBox txtSerie;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -449,15 +577,28 @@
         private System.Windows.Forms.ComboBox cmbAtiende;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtCel;
-        private System.Windows.Forms.TextBox txtCliente;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ComboBox cmbAccesorio;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox txtFalla;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtObservacion;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAccesorio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Accesorio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Serie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Observacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idOrden;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.TextBox txtIDUsu;
     }
 }
