@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CapaDatos\clsAccesorios.cs" />
+    <Compile Include="CapaDatos\clsDiagnostico.cs" />
     <Compile Include="CapaDatos\clsEquipo.cs" />
     <Compile Include="CapaDatos\clsOrden.cs" />
     <Compile Include="CapaDatos\clsRangoUsuario.cs" />
@@ -57,6 +58,12 @@
     </Compile>
     <Compile Include="CapaPresentacion\Base.Designer.cs">
       <DependentUpon>Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Diagnostico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Diagnostico.Designer.cs">
+      <DependentUpon>Diagnostico.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaPresentacion\Menu.cs">
       <SubType>Form</SubType>
@@ -74,6 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CapaPresentacion\Base.resx">
       <DependentUpon>Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Diagnostico.resx">
+      <DependentUpon>Diagnostico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

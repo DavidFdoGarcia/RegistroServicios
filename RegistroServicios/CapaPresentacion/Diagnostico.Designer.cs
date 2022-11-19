@@ -28,12 +28,85 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtOrden = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txDiagnostico = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(126, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 23);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Diagnóstico";
+            // 
+            // txtOrden
+            // 
+            this.txtOrden.Location = new System.Drawing.Point(220, 74);
+            this.txtOrden.Name = "txtOrden";
+            this.txtOrden.Size = new System.Drawing.Size(72, 20);
+            this.txtOrden.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(69, 73);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 18);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "No. Orden:";
+            // 
+            // txDiagnostico
+            // 
+            this.txDiagnostico.Location = new System.Drawing.Point(142, 138);
+            this.txDiagnostico.Multiline = true;
+            this.txDiagnostico.Name = "txDiagnostico";
+            this.txDiagnostico.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txDiagnostico.Size = new System.Drawing.Size(216, 184);
+            this.txDiagnostico.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(23, 138);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 18);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Diagnóstico:";
+            // 
+            // Diagnostico
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(422, 371);
+            this.Controls.Add(this.txDiagnostico);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtOrden);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Name = "Diagnostico";
             this.Text = "Diagnostico";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtOrden;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txDiagnostico;
+        private System.Windows.Forms.Label label2;
     }
 }
