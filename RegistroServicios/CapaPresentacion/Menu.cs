@@ -27,5 +27,11 @@ namespace RegistroServicios.CapaPresentacion
             RealizaOrden RO = new RealizaOrden();
             RO.Show();
         }
+
+        private void diagnosticoDeOrdenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Diagnostico dia = new Diagnostico();
+            dia.Show();
+        }
     }
 }

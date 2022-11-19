@@ -30,16 +30,19 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtIDUsu = new System.Windows.Forms.TextBox();
             this.dtIngreso = new System.Windows.Forms.DateTimePicker();
             this.txtOrden = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtObservacion = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.cmbEquipo = new System.Windows.Forms.ComboBox();
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.txtSerie = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -58,31 +61,36 @@
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.picturePie = new System.Windows.Forms.PictureBox();
+            this.pictureCabecera = new System.Windows.Forms.PictureBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.txtObservacion = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.idAccesorio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Accesorio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.txtIDUsu = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCabecera)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(12, 25);
             this.tabControl1.Name = "tabControl1";
@@ -107,6 +115,14 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // txtIDUsu
+            // 
+            this.txtIDUsu.Location = new System.Drawing.Point(6, 115);
+            this.txtIDUsu.Name = "txtIDUsu";
+            this.txtIDUsu.Size = new System.Drawing.Size(19, 23);
+            this.txtIDUsu.TabIndex = 11;
+            this.txtIDUsu.Visible = false;
             // 
             // dtIngreso
             // 
@@ -142,6 +158,37 @@
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Equipo";
+            // 
+            // txtObservacion
+            // 
+            this.txtObservacion.Location = new System.Drawing.Point(405, 55);
+            this.txtObservacion.Multiline = true;
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtObservacion.Size = new System.Drawing.Size(305, 91);
+            this.txtObservacion.TabIndex = 8;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label13.Location = new System.Drawing.Point(292, 66);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(107, 18);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "Observación:";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(336, 479);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(179, 20);
+            this.radioButton2.TabIndex = 11;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Agregar Accesorio y Falla";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // cmbEquipo
             // 
@@ -197,18 +244,6 @@
             this.label7.Size = new System.Drawing.Size(63, 18);
             this.label7.TabIndex = 5;
             this.label7.Text = "Equipo:";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(85, 447);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(145, 17);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Agregar Accesorio y Falla";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -409,6 +444,51 @@
             this.label11.TabIndex = 13;
             this.label11.Text = "Falla:";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.picturePie);
+            this.tabPage3.Controls.Add(this.pictureCabecera);
+            this.tabPage3.Location = new System.Drawing.Point(4, 26);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(768, 370);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "objetos";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // picturePie
+            // 
+            this.picturePie.Image = global::RegistroServicios.Properties.Resources.PIEPAGINA_COMPUCENTRO2;
+            this.picturePie.Location = new System.Drawing.Point(5, 136);
+            this.picturePie.Margin = new System.Windows.Forms.Padding(5);
+            this.picturePie.Name = "picturePie";
+            this.picturePie.Size = new System.Drawing.Size(758, 99);
+            this.picturePie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picturePie.TabIndex = 37;
+            this.picturePie.TabStop = false;
+            // 
+            // pictureCabecera
+            // 
+            this.pictureCabecera.Image = global::RegistroServicios.Properties.Resources.CABECERA_COMPUCENTRO1;
+            this.pictureCabecera.Location = new System.Drawing.Point(5, 19);
+            this.pictureCabecera.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureCabecera.Name = "pictureCabecera";
+            this.pictureCabecera.Size = new System.Drawing.Size(758, 99);
+            this.pictureCabecera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureCabecera.TabIndex = 36;
+            this.pictureCabecera.TabStop = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(85, 447);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(145, 17);
+            this.radioButton1.TabIndex = 8;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Agregar Accesorio y Falla";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -430,6 +510,7 @@
             this.button2.TabIndex = 13;
             this.button2.Text = "Imprimir";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -443,42 +524,36 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // txtObservacion
+            // btnNuevo
             // 
-            this.txtObservacion.Location = new System.Drawing.Point(405, 55);
-            this.txtObservacion.Multiline = true;
-            this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObservacion.Size = new System.Drawing.Size(305, 91);
-            this.txtObservacion.TabIndex = 8;
+            this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnNuevo.Location = new System.Drawing.Point(426, 435);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(87, 38);
+            this.btnNuevo.TabIndex = 15;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // label13
+            // btnImprimir
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(292, 66);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 18);
-            this.label13.TabIndex = 10;
-            this.label13.Text = "Observación:";
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(336, 479);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(179, 20);
-            this.radioButton2.TabIndex = 11;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Agregar Accesorio y Falla";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.btnImprimir.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnImprimir.Location = new System.Drawing.Point(286, 435);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(87, 38);
+            this.btnImprimir.TabIndex = 16;
+            this.btnImprimir.Text = "Imprimir2";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // idAccesorio
             // 
             this.idAccesorio.DataPropertyName = "idAccesorio";
             this.idAccesorio.HeaderText = "idAccesorio";
             this.idAccesorio.Name = "idAccesorio";
+            this.idAccesorio.Visible = false;
             // 
             // Accesorio
             // 
@@ -505,32 +580,14 @@
             this.idOrden.DataPropertyName = "Orden";
             this.idOrden.HeaderText = "idOrden";
             this.idOrden.Name = "idOrden";
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnNuevo.Location = new System.Drawing.Point(426, 435);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(87, 38);
-            this.btnNuevo.TabIndex = 15;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // txtIDUsu
-            // 
-            this.txtIDUsu.Location = new System.Drawing.Point(6, 115);
-            this.txtIDUsu.Name = "txtIDUsu";
-            this.txtIDUsu.Size = new System.Drawing.Size(19, 23);
-            this.txtIDUsu.TabIndex = 11;
-            this.txtIDUsu.Visible = false;
+            this.idOrden.Visible = false;
             // 
             // RealizaOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 485);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -550,6 +607,9 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picturePie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCabecera)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -593,12 +653,16 @@
         private System.Windows.Forms.TextBox txtObservacion;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.TextBox txtIDUsu;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.PictureBox picturePie;
+        private System.Windows.Forms.PictureBox pictureCabecera;
+        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAccesorio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Accesorio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Serie;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn idOrden;
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.TextBox txtIDUsu;
     }
 }

@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.diagnosticoDeOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             // registroToolStripMenuItem
             // 
             this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ordenToolStripMenuItem});
+            this.ordenToolStripMenuItem,
+            this.diagnosticoDeOrdenToolStripMenuItem});
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.registroToolStripMenuItem.Text = "Registro";
@@ -55,9 +57,16 @@
             // ordenToolStripMenuItem
             // 
             this.ordenToolStripMenuItem.Name = "ordenToolStripMenuItem";
-            this.ordenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ordenToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.ordenToolStripMenuItem.Text = "Orden";
             this.ordenToolStripMenuItem.Click += new System.EventHandler(this.ordenToolStripMenuItem_Click);
+            // 
+            // diagnosticoDeOrdenToolStripMenuItem
+            // 
+            this.diagnosticoDeOrdenToolStripMenuItem.Name = "diagnosticoDeOrdenToolStripMenuItem";
+            this.diagnosticoDeOrdenToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.diagnosticoDeOrdenToolStripMenuItem.Text = "Diagnostico de Orden";
+            this.diagnosticoDeOrdenToolStripMenuItem.Click += new System.EventHandler(this.diagnosticoDeOrdenToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -81,5 +90,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem diagnosticoDeOrdenToolStripMenuItem;
     }
 }
