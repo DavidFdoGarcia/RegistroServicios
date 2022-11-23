@@ -33,5 +33,11 @@ namespace RegistroServicios.CapaPresentacion
             Diagnostico dia = new Diagnostico();
             dia.Show();
         }
+
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reportes re = new Reportes();
+            re.Show();
+        }
     }
 }

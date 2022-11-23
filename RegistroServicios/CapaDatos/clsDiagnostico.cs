@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -29,12 +30,20 @@ namespace RegistroServicios.CapaDatos
         public clsDiagnostico(int idOrden, string Diagnostico)
         {
             Idorden = idOrden;
-            DiagnosticoO = Diagnostico;
-            
-
+            DiagnosticoO = Diagnostico;     
         }
 
-
+        public void ActualizaOrdenDiagnostico(int idOrden, string Diagnostico)
+        {
+            Comando.Connection = Conexion.AbrirConexion();
+            Comando.CommandText = "actualizaOrdenDiagnostico";
+            Comando.Parameters.AddWithValue("@Orden", idOrden); ;
+            Comando.Parameters.AddWithValue("@Diagnostico", Diagnostico);
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.ExecuteNonQuery();
+            Comando.Parameters.Clear();
+            Conexion.CerrarConexion();
+        }
     }
 
 

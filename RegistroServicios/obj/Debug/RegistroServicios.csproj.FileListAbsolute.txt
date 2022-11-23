@@ -10,3 +10,5 @@ C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\bin\Debug\Regi
 C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.exe
 C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.pdb
 C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.CapaPresentacion.RealizaOrden.resources
+C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.CapaPresentacion.Diagnostico.resources
+C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.CapaPresentacion.Reportes.resources

@@ -183,7 +183,7 @@ namespace RegistroServicios.CapaPresentacion
         private void insertaOrdenUsuarioE()
         {
             clsOrden clsO = new clsOrden();
-            clsO.insertaUsuarioOrden(Convert.ToInt16(cmbAtiende.SelectedValue), Convert.ToInt16(txtOrden.Text));
+            clsO.insertaEmpleadoOrden(Convert.ToInt16(cmbAtiende.SelectedValue), Convert.ToInt16(txtOrden.Text));
         }
 
         public void InsertaAccesorio()

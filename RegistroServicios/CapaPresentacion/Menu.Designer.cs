@@ -32,6 +32,7 @@
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diagnosticoDeOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,8 @@
             // 
             this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ordenToolStripMenuItem,
-            this.diagnosticoDeOrdenToolStripMenuItem});
+            this.diagnosticoDeOrdenToolStripMenuItem,
+            this.reportesToolStripMenuItem});
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.registroToolStripMenuItem.Text = "Registro";
@@ -67,6 +69,13 @@
             this.diagnosticoDeOrdenToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.diagnosticoDeOrdenToolStripMenuItem.Text = "Diagnostico de Orden";
             this.diagnosticoDeOrdenToolStripMenuItem.Click += new System.EventHandler(this.diagnosticoDeOrdenToolStripMenuItem_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reportesToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -91,5 +100,6 @@
         private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem diagnosticoDeOrdenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
     }
 }

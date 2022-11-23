@@ -32,7 +32,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.txtIDUsu = new System.Windows.Forms.TextBox();
             this.dtIngreso = new System.Windows.Forms.DateTimePicker();
-            this.txtOrden = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtObservacion = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.cmbAccesorio = new System.Windows.Forms.ComboBox();
@@ -60,6 +58,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idAccesorio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Accesorio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.picturePie = new System.Windows.Forms.PictureBox();
@@ -67,14 +70,11 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
-            this.idAccesorio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Accesorio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtOrden = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -131,13 +131,6 @@
             this.dtIngreso.Name = "dtIngreso";
             this.dtIngreso.Size = new System.Drawing.Size(138, 23);
             this.dtIngreso.TabIndex = 10;
-            // 
-            // txtOrden
-            // 
-            this.txtOrden.Location = new System.Drawing.Point(410, 33);
-            this.txtOrden.Name = "txtOrden";
-            this.txtOrden.Size = new System.Drawing.Size(72, 23);
-            this.txtOrden.TabIndex = 9;
             // 
             // groupBox2
             // 
@@ -337,17 +330,6 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Nombre:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(307, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "No. Orden:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -433,6 +415,40 @@
             this.dataGridView1.Size = new System.Drawing.Size(468, 219);
             this.dataGridView1.TabIndex = 1;
             // 
+            // idAccesorio
+            // 
+            this.idAccesorio.DataPropertyName = "idAccesorio";
+            this.idAccesorio.HeaderText = "idAccesorio";
+            this.idAccesorio.Name = "idAccesorio";
+            this.idAccesorio.Visible = false;
+            // 
+            // Accesorio
+            // 
+            this.Accesorio.DataPropertyName = "Accesorio";
+            this.Accesorio.HeaderText = "Accesorio";
+            this.Accesorio.Name = "Accesorio";
+            // 
+            // Serie
+            // 
+            this.Serie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Serie.DataPropertyName = "Serie";
+            this.Serie.HeaderText = "Serie";
+            this.Serie.Name = "Serie";
+            // 
+            // Observacion
+            // 
+            this.Observacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Observacion.DataPropertyName = "Observacion";
+            this.Observacion.HeaderText = "Observacion";
+            this.Observacion.Name = "Observacion";
+            // 
+            // idOrden
+            // 
+            this.idOrden.DataPropertyName = "Orden";
+            this.idOrden.HeaderText = "idOrden";
+            this.idOrden.Name = "idOrden";
+            this.idOrden.Visible = false;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -512,18 +528,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.Location = new System.Drawing.Point(540, 435);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 38);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Guardar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -548,39 +552,35 @@
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
-            // idAccesorio
+            // button3
             // 
-            this.idAccesorio.DataPropertyName = "idAccesorio";
-            this.idAccesorio.HeaderText = "idAccesorio";
-            this.idAccesorio.Name = "idAccesorio";
-            this.idAccesorio.Visible = false;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.Location = new System.Drawing.Point(540, 435);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(87, 38);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Guardar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Accesorio
+            // label3
             // 
-            this.Accesorio.DataPropertyName = "Accesorio";
-            this.Accesorio.HeaderText = "Accesorio";
-            this.Accesorio.Name = "Accesorio";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(307, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 18);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "No. Orden:";
             // 
-            // Serie
+            // txtOrden
             // 
-            this.Serie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Serie.DataPropertyName = "Serie";
-            this.Serie.HeaderText = "Serie";
-            this.Serie.Name = "Serie";
-            // 
-            // Observacion
-            // 
-            this.Observacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Observacion.DataPropertyName = "Observacion";
-            this.Observacion.HeaderText = "Observacion";
-            this.Observacion.Name = "Observacion";
-            // 
-            // idOrden
-            // 
-            this.idOrden.DataPropertyName = "Orden";
-            this.idOrden.HeaderText = "idOrden";
-            this.idOrden.Name = "idOrden";
-            this.idOrden.Visible = false;
+            this.txtOrden.Location = new System.Drawing.Point(410, 33);
+            this.txtOrden.Name = "txtOrden";
+            this.txtOrden.Size = new System.Drawing.Size(72, 23);
+            this.txtOrden.TabIndex = 9;
             // 
             // RealizaOrden
             // 
@@ -619,13 +619,11 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtIngreso;
-        private System.Windows.Forms.TextBox txtOrden;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cmbEquipo;
         private System.Windows.Forms.TextBox txtModelo;
@@ -643,7 +641,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox cmbAccesorio;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.TextBox txtFalla;
@@ -664,5 +661,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Serie;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn idOrden;
+        private System.Windows.Forms.TextBox txtOrden;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button3;
     }
 }

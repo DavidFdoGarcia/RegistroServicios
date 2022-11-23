@@ -33,6 +33,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txDiagnostico = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnDiagnostico = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -84,11 +85,24 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Diagnóstico:";
             // 
+            // btnDiagnostico
+            // 
+            this.btnDiagnostico.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiagnostico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDiagnostico.Location = new System.Drawing.Point(250, 365);
+            this.btnDiagnostico.Name = "btnDiagnostico";
+            this.btnDiagnostico.Size = new System.Drawing.Size(108, 42);
+            this.btnDiagnostico.TabIndex = 17;
+            this.btnDiagnostico.Text = "Diagnostico";
+            this.btnDiagnostico.UseVisualStyleBackColor = true;
+            this.btnDiagnostico.Click += new System.EventHandler(this.btnDiagnostico_Click);
+            // 
             // Diagnostico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 371);
+            this.ClientSize = new System.Drawing.Size(388, 446);
+            this.Controls.Add(this.btnDiagnostico);
             this.Controls.Add(this.txDiagnostico);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtOrden);
@@ -108,5 +122,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txDiagnostico;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnDiagnostico;
     }
 }

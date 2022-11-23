@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegistroServicios.CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace RegistroServicios.CapaPresentacion
         public Diagnostico()
         {
             InitializeComponent();
+        }
+
+        private void btnDiagnostico_Click(object sender, EventArgs e)
+        {
+            DiagnosticoO();
+        }
+
+        private void DiagnosticoO()
+        {
+            clsDiagnostico objDiag = new clsDiagnostico();
+            objDiag.ActualizaOrdenDiagnostico(Convert.ToInt32(txtOrden.Text), txDiagnostico.Text);
+            MessageBox.Show("El Diagnostico fue agregado");
         }
     }
 }

@@ -51,6 +51,7 @@
     <Compile Include="CapaDatos\clsEquipo.cs" />
     <Compile Include="CapaDatos\clsOrden.cs" />
     <Compile Include="CapaDatos\clsRangoUsuario.cs" />
+    <Compile Include="CapaDatos\clsReportes.cs" />
     <Compile Include="CapaDatos\ConexionBD.cs" />
     <Compile Include="CapaDatos\dgv.cs" />
     <Compile Include="CapaPresentacion\Base.cs">
@@ -77,6 +78,12 @@
     <Compile Include="CapaPresentacion\RealizaOrden.Designer.cs">
       <DependentUpon>RealizaOrden.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapaPresentacion\Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CapaPresentacion\Base.resx">
@@ -90,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\RealizaOrden.resx">
       <DependentUpon>RealizaOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
