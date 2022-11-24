@@ -85,6 +85,17 @@ namespace RegistroServicios.CapaDatos
             Conexion.CerrarConexion();
         }
 
+        public void EliminaOrden(int idOrden)
+        {
+            Comando.Connection = Conexion.AbrirConexion();
+            Comando.CommandText = "EliminaOrden";
+            Comando.Parameters.AddWithValue("@Orden", idOrden);
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.ExecuteNonQuery();
+            Comando.Parameters.Clear();
+            Conexion.CerrarConexion();
+        }
+
         public void insertaEmpleadoOrden(int idUsuario, int idOrden)
         {
             Comando.Connection = Conexion.AbrirConexion();

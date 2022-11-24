@@ -193,6 +193,8 @@ namespace RegistroServicios.CapaPresentacion
             cls.ActualizaReporte(Convert.ToInt32(txtIDReporte.Text), txtReporte.Text);
             
             InsertaRefaccion();
+
+            cls.InsertaReporteOrden(Convert.ToInt32(txtIDReporte.Text), Convert.ToInt32(txtOrden.Text));
         }
 
         public string ConsultaReporteId()
@@ -417,6 +419,13 @@ namespace RegistroServicios.CapaPresentacion
 
             cls.EliminaRefaccion(Convert.ToInt32(txtOrden.Text));
         }
+
+        private void ActualizaOrdenImporteTotal()
+        {
+            clsReportes clsO = new clsReportes();
+            clsO.ActualizaOrdenImporteTotal(Convert.ToInt16(txtOrden.Text), Convert.ToDouble(txtImp.Text));
+        }
+
     }
 
 }

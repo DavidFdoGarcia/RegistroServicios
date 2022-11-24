@@ -33,9 +33,27 @@ namespace RegistroServicios.CapaPresentacion
 
         private void RealizaOrden_Load(object sender, EventArgs e)
         {
-            dgv.Formato(dataGridView1, 1);
+            txtOrden.Enabled = false;
+            txtNombre.Enabled = false;
+            txtApellido.Enabled = false;
+            txtCel.Enabled = false;
+            cmbAccesorio.Enabled = false;
+            cmbEquipo.Enabled = false;
+            txtModelo.Enabled = false;
+            txtSerie.Enabled = false;
+            dtIngreso.Enabled = false;
+            txtNombre.Enabled = false;
+            txtObservacion.Enabled = false;
+            cmbAtiende.Enabled = false;
+            btnImprimir.Enabled = false;
+            btnCancelar.Enabled = false;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            txtFalla.Enabled = false; 
+            radioButton1.Enabled = false;
 
-            
+            dgv.Formato(dataGridView1, 1);
 
             Tabla.Columns.Add("idAccesorio");
             Tabla.Columns.Add("Accesorio");
@@ -223,10 +241,37 @@ namespace RegistroServicios.CapaPresentacion
             cls.actualizaOrdenFallaC(Convert.ToInt16(txtOrden.Text), txtFalla.Text);
         }
 
+        private void EliminaOrden()
+        {
+            clsOrden cls = new clsOrden();
+            cls.EliminaOrden(Convert.ToInt16(txtOrden.Text));
+        }
+
+
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Desea agregar una nueva orden? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
+                txtOrden.Enabled = true;
+                txtNombre.Enabled = true;
+                txtApellido.Enabled = true;
+                txtCel.Enabled = true;
+                cmbAccesorio.Enabled = true;
+                cmbEquipo.Enabled = true;
+                txtModelo.Enabled = true;
+                txtSerie.Enabled = true;
+                dtIngreso.Enabled = true;
+                txtNombre.Enabled = true;
+                txtObservacion.Enabled = true;
+                cmbAtiende.Enabled = true;
+                btnImprimir.Enabled = true;
+                btnCancelar.Enabled = true;
+                button1.Enabled = true;
+                button2.Enabled = true;
+                button3.Enabled = true;
+                txtFalla.Enabled = true;
+                radioButton1.Enabled = true;
+
                 insertaOrden();
                 txtOrden.Text = ConsultaOrdenId();
             }
@@ -397,6 +442,13 @@ namespace RegistroServicios.CapaPresentacion
                 doc2.Print();
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            EliminaOrden();
+        }
+
+
     }
-    
+
 }

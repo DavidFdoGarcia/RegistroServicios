@@ -21,6 +21,7 @@ namespace RegistroServicios.CapaDatos
         private int _idrefaccion;
         private string _nombrecompleto;
         private string _descripcionfalla;
+        private double _importetotal;
 
         public int Idusuario { get => _idusuario; set => _idusuario = value; }
         public int Idrango { get => _idrango; set => _idrango = value; }
@@ -28,6 +29,7 @@ namespace RegistroServicios.CapaDatos
         public int Idreporte { get => _idreporte; set => _idreporte = value; }
         public string Descripcionfalla { get => _descripcionfalla; set => _descripcionfalla = value; }
         public int Idrefaccion { get => _idrefaccion; set => _idrefaccion = value; }
+        public double Importetotal { get => _importetotal; set => _importetotal = value; }
 
         public clsReportes()
         {
@@ -35,13 +37,14 @@ namespace RegistroServicios.CapaDatos
 
         //Constructor con parametros
 
-        public clsReportes(int idReporte, int idRefaccion, int idUsuario, string NombreCompleto, string DescipcionFalla)
+        public clsReportes(int idReporte, int idRefaccion, int idUsuario, double ImporteTotal, string NombreCompleto, string DescipcionFalla)
         {
             Idusuario = idUsuario;
             Nombrecompleto = NombreCompleto;
             Idreporte = idReporte;
             Descripcionfalla = DescipcionFalla;
             Idrefaccion = idRefaccion;
+            Importetotal = ImporteTotal;
         }
 
         public DataTable ListarTecnico()
@@ -114,5 +117,30 @@ namespace RegistroServicios.CapaDatos
             Comando.Parameters.Clear();
             Conexion.CerrarConexion();
         }
+
+        public void InsertaReporteOrden(int idReporte, int idOrden)
+        {
+            Comando.Connection = Conexion.AbrirConexion();
+            Comando.CommandText = "InsertaReporteOrden";
+            Comando.Parameters.AddWithValue("@Reporte", idReporte);
+            Comando.Parameters.AddWithValue("@Orden", idOrden);
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.ExecuteNonQuery();
+            Comando.Parameters.Clear();
+            Conexion.CerrarConexion();
+        }
+
+        public void ActualizaOrdenImporteTotal(int idOrden, double ImporteTotal)
+        {
+            Comando.Connection = Conexion.AbrirConexion();
+            Comando.CommandText = "InsertaReporteOrden";
+            Comando.Parameters.AddWithValue("@Orden", idOrden);
+            Comando.Parameters.AddWithValue("@Total", ImporteTotal);
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.ExecuteNonQuery();
+            Comando.Parameters.Clear();
+            Conexion.CerrarConexion();
+        }
+
     }
 }
