@@ -27,6 +27,28 @@ namespace RegistroServicios.CapaPresentacion
 
         private void Reportes_Load(object sender, EventArgs e)
         {
+            txtOrden.Enabled = false;
+            txtIDReporte.Enabled = false;
+            txtEquipo.Enabled = false;
+            txtCel.Enabled = false;
+            txtReporte.Enabled = false;
+            txtApellido.Enabled = false;
+            txtModelo.Enabled = false;
+            txtSerie.Enabled = false;
+            dtSalida.Enabled = false;
+            txtNombre.Enabled = false;
+            cmbReparo.Enabled = false;
+            btnBuscar.Enabled = false;
+            btnImprimir.Enabled = false;
+            btnGuardar.Enabled = false;
+            txtCantidad.Enabled = false;
+            txtDescripcion.Enabled = false;
+            txtPrecio.Enabled = false;
+            btnAgregar.Enabled = false;
+            txtImp.Enabled = false;
+            btnCancelar.Enabled = false;
+            radioButton1.Enabled = false;
+
             dgv.Formato(dataGridView1, 1);
 
 
@@ -167,11 +189,28 @@ namespace RegistroServicios.CapaPresentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // clsReportes cls = new clsReportes();
-            //cls.insertaReporte(txtReporte.Text);
+            clsReportes cls = new clsReportes();
+            cls.ActualizaReporte(Convert.ToInt32(txtIDReporte.Text), txtReporte.Text);
+            
             InsertaRefaccion();
         }
 
+        public string ConsultaReporteId()
+        {
+            ConexionBD cn = new ConexionBD();
+            cn.AbrirConexion();
+            string query = "select max (idReporte) as ID from Reporte";
+            SqlCommand cmd = new SqlCommand(query, cn.AbrirConexion());
+            SqlDataReader reg = cmd.ExecuteReader();
+            if (reg.Read())
+            {
+                return reg["ID"].ToString();
+            }
+            else
+            {
+                return "NULL";
+            }
+        }
 
 
         public void InsertaRefaccion()
@@ -341,6 +380,42 @@ namespace RegistroServicios.CapaPresentacion
             ImporteTotal();
 
             lblRow.Text = "Total de registros: " + Convert.ToString(dataGridView1.Rows.Count);
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+             clsReportes cls = new clsReportes();
+            cls.insertaReporte(txtReporte.Text);
+            MessageBox.Show("El reporte esta listo para ser procesado");
+
+            txtIDReporte.Text = ConsultaReporteId();
+
+            txtOrden.Enabled = true;
+            txtReporte.Enabled = true;
+            cmbReparo.Enabled = true;
+            btnBuscar.Enabled = true;
+            btnImprimir.Enabled = true;
+            btnGuardar.Enabled = true;
+            txtCantidad.Enabled = true;
+            txtDescripcion.Enabled = true;
+            txtPrecio.Enabled = true;
+            btnAgregar.Enabled = true;
+            txtImp.Enabled = true;
+            btnCancelar.Enabled = true;
+            radioButton1.Enabled = true;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            clsReportes cls = new clsReportes();
+            cls.EliminaReporte(Convert.ToInt32(txtIDReporte.Text));
+
+            cls.EliminaRefaccion(Convert.ToInt32(txtOrden.Text));
         }
     }
 

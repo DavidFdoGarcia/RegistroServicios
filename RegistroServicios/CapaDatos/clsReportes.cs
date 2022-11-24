@@ -18,6 +18,7 @@ namespace RegistroServicios.CapaDatos
         private int _idusuario;
         private int _idrango;
         private int _idreporte;
+        private int _idrefaccion;
         private string _nombrecompleto;
         private string _descripcionfalla;
 
@@ -26,6 +27,7 @@ namespace RegistroServicios.CapaDatos
         public string Nombrecompleto { get => _nombrecompleto; set => _nombrecompleto = value; }
         public int Idreporte { get => _idreporte; set => _idreporte = value; }
         public string Descripcionfalla { get => _descripcionfalla; set => _descripcionfalla = value; }
+        public int Idrefaccion { get => _idrefaccion; set => _idrefaccion = value; }
 
         public clsReportes()
         {
@@ -33,12 +35,13 @@ namespace RegistroServicios.CapaDatos
 
         //Constructor con parametros
 
-        public clsReportes(int idReporte, int idUsuario, string NombreCompleto, string DescipcionFalla)
+        public clsReportes(int idReporte, int idRefaccion, int idUsuario, string NombreCompleto, string DescipcionFalla)
         {
             Idusuario = idUsuario;
             Nombrecompleto = NombreCompleto;
             Idreporte = idReporte;
             Descripcionfalla = DescipcionFalla;
+            Idrefaccion = idRefaccion;
         }
 
         public DataTable ListarTecnico()
@@ -67,11 +70,45 @@ namespace RegistroServicios.CapaDatos
             return coleccion;
         }
 
+        public void ActualizaReporte(int idReporte, string DescripcionFalla)
+        {
+            Comando.Connection = Conexion.AbrirConexion();
+            Comando.CommandText = "ActualizaReporte";
+            Comando.Parameters.AddWithValue("@ID", idReporte);
+            Comando.Parameters.AddWithValue("@Descripcion", DescripcionFalla);
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.ExecuteNonQuery();
+            Comando.Parameters.Clear();
+            Conexion.CerrarConexion();
+        }
+
         public void insertaReporte(string DescripcionFalla)
         {
             Comando.Connection = Conexion.AbrirConexion();
             Comando.CommandText = "InsertaReporte";
             Comando.Parameters.AddWithValue("@Descripcion", DescripcionFalla);
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.ExecuteNonQuery();
+            Comando.Parameters.Clear();
+            Conexion.CerrarConexion();
+        }
+
+        public void EliminaReporte(int idReporte)
+        {
+            Comando.Connection = Conexion.AbrirConexion();
+            Comando.CommandText = "EliminaReporte";
+            Comando.Parameters.AddWithValue("@ID", idReporte);
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.ExecuteNonQuery();
+            Comando.Parameters.Clear();
+            Conexion.CerrarConexion();
+        }
+
+        public void EliminaRefaccion(int idOrden)
+        {
+            Comando.Connection = Conexion.AbrirConexion();
+            Comando.CommandText = "EliminaRefaccion";
+            Comando.Parameters.AddWithValue("@ID", idOrden);
             Comando.CommandType = CommandType.StoredProcedure;
             Comando.ExecuteNonQuery();
             Comando.Parameters.Clear();
