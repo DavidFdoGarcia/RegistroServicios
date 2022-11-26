@@ -45,5 +45,11 @@ namespace RegistroServicios.CapaPresentacion
             ModificarStatus MO = new ModificarStatus();
             MO.Show();
         }
+
+        private void modificarFechaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModificarFechaSalida mo = new ModificarFechaSalida();
+            mo.Show();
+        }
     }
 }

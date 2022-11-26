@@ -35,7 +35,10 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.modificarFechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -83,7 +86,8 @@
             // modificacionesToolStripMenuItem
             // 
             this.modificacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modificarStatusToolStripMenuItem});
+            this.modificarStatusToolStripMenuItem,
+            this.modificarFechaToolStripMenuItem});
             this.modificacionesToolStripMenuItem.Name = "modificacionesToolStripMenuItem";
             this.modificacionesToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.modificacionesToolStripMenuItem.Text = "Modificaciones";
@@ -95,11 +99,29 @@
             this.modificarStatusToolStripMenuItem.Text = "Modificar Status";
             this.modificarStatusToolStripMenuItem.Click += new System.EventHandler(this.modificarStatusToolStripMenuItem_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RegistroServicios.Properties.Resources.COMPUUCENTRO__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(776, 400);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // modificarFechaToolStripMenuItem
+            // 
+            this.modificarFechaToolStripMenuItem.Name = "modificarFechaToolStripMenuItem";
+            this.modificarFechaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarFechaToolStripMenuItem.Text = "Modificar Fecha";
+            this.modificarFechaToolStripMenuItem.Click += new System.EventHandler(this.modificarFechaToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
@@ -107,6 +129,7 @@
             this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,5 +144,7 @@
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarStatusToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem modificarFechaToolStripMenuItem;
     }
 }

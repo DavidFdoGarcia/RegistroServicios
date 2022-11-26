@@ -13,3 +13,4 @@ C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\Regi
 C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.CapaPresentacion.Diagnostico.resources
 C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.CapaPresentacion.Reportes.resources
 C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.CapaPresentacion.ModificarStatus.resources
+C:\Users\Gerardo\source\repos\RegistroServicios\RegistroServicios\obj\Debug\RegistroServicios.CapaPresentacion.ModificarFechaSalida.resources

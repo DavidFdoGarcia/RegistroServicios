@@ -49,6 +49,7 @@
     <Compile Include="CapaDatos\clsAccesorios.cs" />
     <Compile Include="CapaDatos\clsDiagnostico.cs" />
     <Compile Include="CapaDatos\clsEquipo.cs" />
+    <Compile Include="CapaDatos\clsFechaSalida.cs" />
     <Compile Include="CapaDatos\clsOrden.cs" />
     <Compile Include="CapaDatos\clsRangoUsuario.cs" />
     <Compile Include="CapaDatos\clsReportes.cs" />
@@ -72,6 +73,12 @@
     </Compile>
     <Compile Include="CapaPresentacion\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModificarFechaSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModificarFechaSalida.Designer.cs">
+      <DependentUpon>ModificarFechaSalida.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaPresentacion\ModificarStatus.cs">
       <SubType>Form</SubType>
@@ -101,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\ModificarFechaSalida.resx">
+      <DependentUpon>ModificarFechaSalida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\ModificarStatus.resx">
       <DependentUpon>ModificarStatus.cs</DependentUpon>
@@ -139,6 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PIEPAGINA_COMPUCENTRO2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COMPUUCENTRO %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
