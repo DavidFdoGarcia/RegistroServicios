@@ -52,6 +52,7 @@
     <Compile Include="CapaDatos\clsOrden.cs" />
     <Compile Include="CapaDatos\clsRangoUsuario.cs" />
     <Compile Include="CapaDatos\clsReportes.cs" />
+    <Compile Include="CapaDatos\clsStatus.cs" />
     <Compile Include="CapaDatos\ConexionBD.cs" />
     <Compile Include="CapaDatos\dgv.cs" />
     <Compile Include="CapaPresentacion\Base.cs">
@@ -71,6 +72,12 @@
     </Compile>
     <Compile Include="CapaPresentacion\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModificarStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ModificarStatus.Designer.cs">
+      <DependentUpon>ModificarStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaPresentacion\RealizaOrden.cs">
       <SubType>Form</SubType>
@@ -94,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\ModificarStatus.resx">
+      <DependentUpon>ModificarStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\RealizaOrden.resx">
       <DependentUpon>RealizaOrden.cs</DependentUpon>

@@ -33,13 +33,16 @@
             this.ordenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diagnosticoDeOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registroToolStripMenuItem});
+            this.registroToolStripMenuItem,
+            this.modificacionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -77,6 +80,21 @@
             this.reportesToolStripMenuItem.Text = "Reportes";
             this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reportesToolStripMenuItem_Click);
             // 
+            // modificacionesToolStripMenuItem
+            // 
+            this.modificacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modificarStatusToolStripMenuItem});
+            this.modificacionesToolStripMenuItem.Name = "modificacionesToolStripMenuItem";
+            this.modificacionesToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.modificacionesToolStripMenuItem.Text = "Modificaciones";
+            // 
+            // modificarStatusToolStripMenuItem
+            // 
+            this.modificarStatusToolStripMenuItem.Name = "modificarStatusToolStripMenuItem";
+            this.modificarStatusToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarStatusToolStripMenuItem.Text = "Modificar Status";
+            this.modificarStatusToolStripMenuItem.Click += new System.EventHandler(this.modificarStatusToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,5 +119,7 @@
         private System.Windows.Forms.ToolStripMenuItem ordenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem diagnosticoDeOrdenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarStatusToolStripMenuItem;
     }
 }

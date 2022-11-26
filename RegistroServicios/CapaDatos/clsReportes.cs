@@ -73,22 +73,12 @@ namespace RegistroServicios.CapaDatos
             return coleccion;
         }
 
-        public void ActualizaReporte(int idReporte, string DescripcionFalla)
+        public void ActualizaReporte(int idReporte, int idOrden, string DescripcionFalla)
         {
             Comando.Connection = Conexion.AbrirConexion();
             Comando.CommandText = "ActualizaReporte";
             Comando.Parameters.AddWithValue("@ID", idReporte);
-            Comando.Parameters.AddWithValue("@Descripcion", DescripcionFalla);
-            Comando.CommandType = CommandType.StoredProcedure;
-            Comando.ExecuteNonQuery();
-            Comando.Parameters.Clear();
-            Conexion.CerrarConexion();
-        }
-
-        public void insertaReporte(string DescripcionFalla)
-        {
-            Comando.Connection = Conexion.AbrirConexion();
-            Comando.CommandText = "InsertaReporte";
+            Comando.Parameters.AddWithValue("@Orden", idOrden);
             Comando.Parameters.AddWithValue("@Descripcion", DescripcionFalla);
             Comando.CommandType = CommandType.StoredProcedure;
             Comando.ExecuteNonQuery();
@@ -118,12 +108,12 @@ namespace RegistroServicios.CapaDatos
             Conexion.CerrarConexion();
         }
 
-        public void InsertaReporteOrden(int idReporte, int idOrden)
+        public void insertaReporte(int idOrden, string DescripcionFalla)
         {
             Comando.Connection = Conexion.AbrirConexion();
-            Comando.CommandText = "InsertaReporteOrden";
-            Comando.Parameters.AddWithValue("@Reporte", idReporte);
+            Comando.CommandText = "InsertaReporte";
             Comando.Parameters.AddWithValue("@Orden", idOrden);
+            Comando.Parameters.AddWithValue("@Descripcion", DescripcionFalla);
             Comando.CommandType = CommandType.StoredProcedure;
             Comando.ExecuteNonQuery();
             Comando.Parameters.Clear();
@@ -133,9 +123,21 @@ namespace RegistroServicios.CapaDatos
         public void ActualizaOrdenImporteTotal(int idOrden, double ImporteTotal)
         {
             Comando.Connection = Conexion.AbrirConexion();
-            Comando.CommandText = "InsertaReporteOrden";
+            Comando.CommandText = "ActualizaOrdenImporteTotal";
             Comando.Parameters.AddWithValue("@Orden", idOrden);
             Comando.Parameters.AddWithValue("@Total", ImporteTotal);
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.ExecuteNonQuery();
+            Comando.Parameters.Clear();
+            Conexion.CerrarConexion();
+        }
+
+        public void ActualizaOrdenEnReporte(int idReporte, int idOrden)
+        {
+            Comando.Connection = Conexion.AbrirConexion();
+            Comando.CommandText = "ActualizaOrdenEnReporte";
+            Comando.Parameters.AddWithValue("@Orden", idOrden);
+            Comando.Parameters.AddWithValue("@Reporte", idReporte);
             Comando.CommandType = CommandType.StoredProcedure;
             Comando.ExecuteNonQuery();
             Comando.Parameters.Clear();

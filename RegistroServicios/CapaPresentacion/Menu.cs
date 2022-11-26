@@ -39,5 +39,11 @@ namespace RegistroServicios.CapaPresentacion
             Reportes re = new Reportes();
             re.Show();
         }
+
+        private void modificarStatusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModificarStatus MO = new ModificarStatus();
+            MO.Show();
+        }
     }
 }

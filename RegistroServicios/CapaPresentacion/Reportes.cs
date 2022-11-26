@@ -179,6 +179,9 @@ namespace RegistroServicios.CapaPresentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            btnImprimir.Enabled = true;
+            btnGuardar.Enabled = true;
+
             txtNombre.Text = ConsultaOrdenNombre();
             txtApellido.Text = ConsultaOrdenApellidos();
             txtCel.Text = ConsultaOrdenCelular();
@@ -189,12 +192,16 @@ namespace RegistroServicios.CapaPresentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            clsReportes cls = new clsReportes();
-            cls.ActualizaReporte(Convert.ToInt32(txtIDReporte.Text), txtReporte.Text);
+           clsReportes cls = new clsReportes();
+           cls.ActualizaReporte(Convert.ToInt32(txtIDReporte.Text), Convert.ToInt32(txtOrden.Text), txtReporte.Text);
             
             InsertaRefaccion();
 
-            cls.InsertaReporteOrden(Convert.ToInt32(txtIDReporte.Text), Convert.ToInt32(txtOrden.Text));
+            ActualizaOrdenImporteTotal();
+
+            cls.ActualizaOrdenEnReporte(Convert.ToInt32(txtIDReporte.Text), Convert.ToInt32(txtOrden.Text));
+
+            
         }
 
         public string ConsultaReporteId()
@@ -214,7 +221,7 @@ namespace RegistroServicios.CapaPresentacion
             }
         }
 
-
+      
         public void InsertaRefaccion()
         {
 
@@ -387,7 +394,7 @@ namespace RegistroServicios.CapaPresentacion
         private void btnNuevo_Click(object sender, EventArgs e)
         {
              clsReportes cls = new clsReportes();
-            cls.insertaReporte(txtReporte.Text);
+            cls.insertaReporte(1,txtReporte.Text);
             MessageBox.Show("El reporte esta listo para ser procesado");
 
             txtIDReporte.Text = ConsultaReporteId();
@@ -395,9 +402,7 @@ namespace RegistroServicios.CapaPresentacion
             txtOrden.Enabled = true;
             txtReporte.Enabled = true;
             cmbReparo.Enabled = true;
-            btnBuscar.Enabled = true;
-            btnImprimir.Enabled = true;
-            btnGuardar.Enabled = true;
+            btnBuscar.Enabled = true;   
             txtCantidad.Enabled = true;
             txtDescripcion.Enabled = true;
             txtPrecio.Enabled = true;
@@ -425,6 +430,7 @@ namespace RegistroServicios.CapaPresentacion
             clsReportes clsO = new clsReportes();
             clsO.ActualizaOrdenImporteTotal(Convert.ToInt16(txtOrden.Text), Convert.ToDouble(txtImp.Text));
         }
+
 
     }
 

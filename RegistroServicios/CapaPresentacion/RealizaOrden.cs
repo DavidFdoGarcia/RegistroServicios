@@ -366,7 +366,7 @@ namespace RegistroServicios.CapaPresentacion
         {
             //Font tipoTexto = new Font("Arial", 10, FontStyle.Bold);
             Font font = new Font("Arial", 12, FontStyle.Bold);
-            Font font2 = new Font("Arial", 10, FontStyle.Bold);
+            Font font2 = new Font("Arial", 8, FontStyle.Bold);
             // 
             int y = 20;
             e.Graphics.DrawImage(pictureCabecera.Image, new Rectangle(5, 5, 850, 80));

@@ -30,9 +30,12 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtIDReporte = new System.Windows.Forms.TextBox();
             this.dtSalida = new System.Windows.Forms.DateTimePicker();
+            this.label15 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txtReporte = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtEquipo = new System.Windows.Forms.TextBox();
@@ -78,10 +81,8 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.txtIDReporte = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtIDTec = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -124,6 +125,13 @@
             this.tabPage1.Text = "Reporte";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // txtIDReporte
+            // 
+            this.txtIDReporte.Location = new System.Drawing.Point(430, 26);
+            this.txtIDReporte.Name = "txtIDReporte";
+            this.txtIDReporte.Size = new System.Drawing.Size(72, 23);
+            this.txtIDReporte.TabIndex = 15;
+            // 
             // dtSalida
             // 
             this.dtSalida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -131,6 +139,17 @@
             this.dtSalida.Name = "dtSalida";
             this.dtSalida.Size = new System.Drawing.Size(138, 23);
             this.dtSalida.TabIndex = 43;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label15.Location = new System.Drawing.Point(316, 27);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(99, 18);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "No. Reporte:";
             // 
             // label2
             // 
@@ -145,6 +164,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtIDTec);
             this.groupBox2.Controls.Add(this.radioButton1);
             this.groupBox2.Controls.Add(this.txtReporte);
             this.groupBox2.Controls.Add(this.label10);
@@ -163,6 +183,18 @@
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Equipo";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(32, 132);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(136, 20);
+            this.radioButton1.TabIndex = 15;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Agregar Refaccion";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // txtReporte
             // 
@@ -582,7 +614,7 @@
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnGuardar.Location = new System.Drawing.Point(643, 408);
+            this.btnGuardar.Location = new System.Drawing.Point(625, 408);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(87, 38);
             this.btnGuardar.TabIndex = 15;
@@ -614,36 +646,6 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // txtIDReporte
-            // 
-            this.txtIDReporte.Location = new System.Drawing.Point(430, 26);
-            this.txtIDReporte.Name = "txtIDReporte";
-            this.txtIDReporte.Size = new System.Drawing.Size(72, 23);
-            this.txtIDReporte.TabIndex = 15;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(316, 27);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(99, 18);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "No. Reporte:";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(32, 132);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(136, 20);
-            this.radioButton1.TabIndex = 15;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Agregar Refaccion";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -655,6 +657,13 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // txtIDTec
+            // 
+            this.txtIDTec.Location = new System.Drawing.Point(696, 30);
+            this.txtIDTec.Name = "txtIDTec";
+            this.txtIDTec.Size = new System.Drawing.Size(22, 22);
+            this.txtIDTec.TabIndex = 14;
             // 
             // Reportes
             // 
@@ -744,5 +753,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtIDTec;
     }
 }
