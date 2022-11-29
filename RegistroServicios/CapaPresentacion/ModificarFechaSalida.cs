@@ -47,6 +47,23 @@ namespace RegistroServicios.CapaPresentacion
 
         }
 
+        private void Garantia()
+        {
+            ConexionBD cn = new ConexionBD();
+            cn.AbrirConexion();
+            String FechaS = dateTimePicker2.Value.Date.Year.ToString() + "/" + dateTimePicker2.Value.Date.Month.ToString() + "/" + dateTimePicker2.Value.Date.Day.ToString();
+            SqlCommand cmd2 = new SqlCommand();
+            cmd2.CommandText = "Garantia";
+            cmd2.Connection = cn.AbrirConexion();
+            cmd2.CommandType = CommandType.StoredProcedure;
+            cmd2.Parameters.AddWithValue("@fecha1", FechaS);
+            cmd2.Parameters.AddWithValue("@idOrden", txtOrden2.Text);
+            cmd2.ExecuteNonQuery();
+            MessageBox.Show("Los datos fueron actualizados con exito");
+
+        }
+
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             actualizarOrdenFecha();
@@ -56,6 +73,29 @@ namespace RegistroServicios.CapaPresentacion
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             DatagridviewCambiarFecha();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void DatagridviewGarantia()
+        {
+            clsFechaSalida objS = new clsFechaSalida();
+            dataGridView2.DataSource = objS.DatagridviewGarantia(Convert.ToInt32(txtOrden2.Text));
+            dgv.Formato(dataGridView2, 1);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Garantia();
+            DatagridviewGarantia();
+        }
+
+        private void btnBuscar2_Click(object sender, EventArgs e)
+        {
+             DatagridviewGarantia();
         }
     }
 }

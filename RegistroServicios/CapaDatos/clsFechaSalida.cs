@@ -16,9 +16,11 @@ namespace RegistroServicios.CapaDatos
 
         private int _idorden;
         private DateTime _fechaingreso;
+        private DateTime _garantiao;
 
         public int Idorden { get => _idorden; set => _idorden = value; }
         public DateTime Fechaingreso { get => _fechaingreso; set => _fechaingreso = value; }
+        public DateTime Garantiao { get => _garantiao; set => _garantiao = value; }
 
         public clsFechaSalida()
         {
@@ -26,10 +28,11 @@ namespace RegistroServicios.CapaDatos
 
         //Constructor con parametros
 
-        public clsFechaSalida(int idOrden, DateTime FechaIngreso)
+        public clsFechaSalida(int idOrden, DateTime FechaIngreso, DateTime Garantia)
         {
             Fechaingreso = FechaIngreso;
             Idorden = idOrden;
+            Garantiao = Garantia;
         }
 
         public DataTable DatagridviewCambiarFecha(int idOrden)
@@ -46,13 +49,12 @@ namespace RegistroServicios.CapaDatos
             return Tabla;
         }
 
-        public DataTable actualizarOrdenFecha(int idOrden, DateTime FechaIngreso)
+        public DataTable DatagridviewGarantia(int idOrden)
         {
             DataTable Tabla = new DataTable();
             Comando.Connection = Conexion.AbrirConexion();
-            Comando.CommandText = "actualizarOrdenFecha";
-            Comando.Parameters.AddWithValue("@orden", idOrden);
-            Comando.Parameters.AddWithValue("@fecha", FechaIngreso);
+            Comando.CommandText = "DatagridviewGarantia";
+            Comando.Parameters.AddWithValue("@Orden", idOrden);
             Comando.CommandType = CommandType.StoredProcedure;
             LeerFilas = Comando.ExecuteReader();
             Tabla.Load(LeerFilas);
@@ -60,5 +62,6 @@ namespace RegistroServicios.CapaDatos
             Conexion.CerrarConexion();
             return Tabla;
         }
+
     }
 }
