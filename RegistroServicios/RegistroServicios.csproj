@@ -50,6 +50,7 @@
     <Compile Include="CapaDatos\clsDiagnostico.cs" />
     <Compile Include="CapaDatos\clsEquipo.cs" />
     <Compile Include="CapaDatos\clsFechaSalida.cs" />
+    <Compile Include="CapaDatos\clsFiltro.cs" />
     <Compile Include="CapaDatos\clsOrden.cs" />
     <Compile Include="CapaDatos\clsRangoUsuario.cs" />
     <Compile Include="CapaDatos\clsReportes.cs" />
@@ -61,6 +62,12 @@
     </Compile>
     <Compile Include="CapaPresentacion\Base.Designer.cs">
       <DependentUpon>Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\ConsultaFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\ConsultaFiltro.Designer.cs">
+      <DependentUpon>ConsultaFiltro.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaPresentacion\Diagnostico.cs">
       <SubType>Form</SubType>
@@ -102,6 +109,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CapaPresentacion\Base.resx">
       <DependentUpon>Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\ConsultaFiltro.resx">
+      <DependentUpon>ConsultaFiltro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\Diagnostico.resx">
       <DependentUpon>Diagnostico.cs</DependentUpon>

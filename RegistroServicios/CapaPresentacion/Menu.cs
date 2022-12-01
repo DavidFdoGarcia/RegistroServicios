@@ -51,5 +51,11 @@ namespace RegistroServicios.CapaPresentacion
             ModificarFechaSalida mo = new ModificarFechaSalida();
             mo.Show();
         }
+
+        private void consultaPorFiltroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaFiltro con = new ConsultaFiltro();
+            con.Show();
+        }
     }
 }

@@ -35,8 +35,10 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.modificarFechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaPorFiltroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +47,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registroToolStripMenuItem,
-            this.modificacionesToolStripMenuItem});
+            this.modificacionesToolStripMenuItem,
+            this.consultasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -95,9 +98,16 @@
             // modificarStatusToolStripMenuItem
             // 
             this.modificarStatusToolStripMenuItem.Name = "modificarStatusToolStripMenuItem";
-            this.modificarStatusToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarStatusToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.modificarStatusToolStripMenuItem.Text = "Modificar Status";
             this.modificarStatusToolStripMenuItem.Click += new System.EventHandler(this.modificarStatusToolStripMenuItem_Click);
+            // 
+            // modificarFechaToolStripMenuItem
+            // 
+            this.modificarFechaToolStripMenuItem.Name = "modificarFechaToolStripMenuItem";
+            this.modificarFechaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.modificarFechaToolStripMenuItem.Text = "Modificar Fecha";
+            this.modificarFechaToolStripMenuItem.Click += new System.EventHandler(this.modificarFechaToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -109,12 +119,20 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // modificarFechaToolStripMenuItem
+            // consultasToolStripMenuItem
             // 
-            this.modificarFechaToolStripMenuItem.Name = "modificarFechaToolStripMenuItem";
-            this.modificarFechaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.modificarFechaToolStripMenuItem.Text = "Modificar Fecha";
-            this.modificarFechaToolStripMenuItem.Click += new System.EventHandler(this.modificarFechaToolStripMenuItem_Click);
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultaPorFiltroToolStripMenuItem});
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.consultasToolStripMenuItem.Text = "Consultas";
+            // 
+            // consultaPorFiltroToolStripMenuItem
+            // 
+            this.consultaPorFiltroToolStripMenuItem.Name = "consultaPorFiltroToolStripMenuItem";
+            this.consultaPorFiltroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaPorFiltroToolStripMenuItem.Text = "Consulta por Filtro";
+            this.consultaPorFiltroToolStripMenuItem.Click += new System.EventHandler(this.consultaPorFiltroToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -146,5 +164,7 @@
         private System.Windows.Forms.ToolStripMenuItem modificarStatusToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem modificarFechaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaPorFiltroToolStripMenuItem;
     }
 }
