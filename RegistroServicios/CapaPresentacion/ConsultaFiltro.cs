@@ -56,9 +56,7 @@ namespace RegistroServicios.CapaPresentacion
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtDiagnostico.Text = dataGridView1.Rows[e.RowIndex].Cells["Diagnostico"].Value.ToString();
-            dateTimePicker1.Text = dataGridView1.Rows[e.RowIndex].Cells["FechaSalida"].Value.ToString();
-            dateTimePicker2.Text = dataGridView1.Rows[e.RowIndex].Cells["Garantia"].Value.ToString();
+            txtDiagnostico.Text = dataGridView1.Rows[e.RowIndex].Cells["Diagnostico"].Value.ToString();            dateTimePicker2.Text = dataGridView1.Rows[e.RowIndex].Cells["Garantia"].Value.ToString();
             txtGarantia.Text = Consultagarantia();
         }
 

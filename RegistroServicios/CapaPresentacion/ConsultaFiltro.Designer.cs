@@ -36,16 +36,6 @@
             this.rTodos = new System.Windows.Forms.RadioButton();
             this.rOrden = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtDiagnostico = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtGarantia = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.idOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoEquipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FallaCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +46,16 @@
             this.Garantia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Diagnostico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDiagnostico = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtGarantia = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,101 +156,6 @@
             this.dataGridView1.TabIndex = 33;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(20, 430);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 18);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Diagnostico:";
-            // 
-            // txtDiagnostico
-            // 
-            this.txtDiagnostico.Location = new System.Drawing.Point(126, 421);
-            this.txtDiagnostico.Multiline = true;
-            this.txtDiagnostico.Name = "txtDiagnostico";
-            this.txtDiagnostico.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDiagnostico.Size = new System.Drawing.Size(207, 89);
-            this.txtDiagnostico.TabIndex = 35;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(376, 451);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 18);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Días de Garantia:";
-            // 
-            // txtGarantia
-            // 
-            this.txtGarantia.Location = new System.Drawing.Point(518, 452);
-            this.txtGarantia.Name = "txtGarantia";
-            this.txtGarantia.Size = new System.Drawing.Size(72, 20);
-            this.txtGarantia.TabIndex = 37;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(552, 73);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 18);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "Fecha:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(634, 73);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(132, 20);
-            this.dateTimePicker1.TabIndex = 39;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(634, 117);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(132, 20);
-            this.dateTimePicker2.TabIndex = 41;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(552, 117);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 18);
-            this.label6.TabIndex = 40;
-            this.label6.Text = "Garantia:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(244, 178);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(157, 18);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "Nombre del Cliente:";
-            // 
-            // cmbCliente
-            // 
-            this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(417, 174);
-            this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(349, 21);
-            this.cmbCliente.TabIndex = 43;
-            // 
             // idOrden
             // 
             this.idOrden.DataPropertyName = "idOrden";
@@ -321,6 +226,105 @@
             this.FechaSalida.HeaderText = "FechaSalida";
             this.FechaSalida.Name = "FechaSalida";
             this.FechaSalida.ReadOnly = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(20, 430);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 18);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Diagnostico:";
+            // 
+            // txtDiagnostico
+            // 
+            this.txtDiagnostico.Location = new System.Drawing.Point(126, 421);
+            this.txtDiagnostico.Multiline = true;
+            this.txtDiagnostico.Name = "txtDiagnostico";
+            this.txtDiagnostico.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDiagnostico.Size = new System.Drawing.Size(207, 89);
+            this.txtDiagnostico.TabIndex = 35;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(376, 451);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(136, 18);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "Días de Garantia:";
+            // 
+            // txtGarantia
+            // 
+            this.txtGarantia.Location = new System.Drawing.Point(518, 452);
+            this.txtGarantia.Name = "txtGarantia";
+            this.txtGarantia.Size = new System.Drawing.Size(72, 20);
+            this.txtGarantia.TabIndex = 37;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label5.Location = new System.Drawing.Point(552, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 18);
+            this.label5.TabIndex = 38;
+            this.label5.Text = "Fecha:";
+            this.label5.Visible = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(634, 73);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(132, 20);
+            this.dateTimePicker1.TabIndex = 39;
+            this.dateTimePicker1.Visible = false;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(634, 117);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(132, 20);
+            this.dateTimePicker2.TabIndex = 41;
+            this.dateTimePicker2.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(552, 117);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 18);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "Garantia:";
+            this.label6.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label7.Location = new System.Drawing.Point(244, 178);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(157, 18);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "Nombre del Cliente:";
+            // 
+            // cmbCliente
+            // 
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.Location = new System.Drawing.Point(417, 174);
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(349, 21);
+            this.cmbCliente.TabIndex = 43;
             // 
             // ConsultaFiltro
             // 
